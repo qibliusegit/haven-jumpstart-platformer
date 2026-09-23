@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="platformer"
-run/main_scene="uid://dg7dij5vxl23r"
+run/main_scene="uid://bkpc75w6cor8u"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+globalvars="*uid://dxaisl1wlwxa1"
 
 [display]
 

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bkpc75w6cor8u"]
+
+[ext_resource type="Texture2D" uid="uid://c46emw5bwwdvk" path="res://russianbocchi.webp" id="1_y7k74"]
+[ext_resource type="Script" uid="uid://c1sqfol6r0734" path="res://button.gd" id="2_kpexm"]
+[ext_resource type="Texture2D" uid="uid://cfh7pjjfq5iyr" path="res://bwaa.png" id="3_3xoar"]
+
+[node name="Node2D" type="Node2D" unique_id=1238452089]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=27725252]
+position = Vector2(588, 350.25)
+scale = Vector2(0.9483871, 0.8888183)
+texture = ExtResource("1_y7k74")
+
+[node name="Label" type="Label" parent="." unique_id=1945756967]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "'bwaa 3:'
+the game"
+
+[node name="Button" type="Button" parent="." unique_id=893514052]
+offset_left = 973.0
+offset_top = 493.0
+offset_right = 1110.0
+offset_bottom = 640.0
+script = ExtResource("2_kpexm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Button" unique_id=1085224493]
+position = Vector2(70.999985, 69.000015)
+scale = Vector2(0.2978723, 0.3275863)
+texture = ExtResource("3_3xoar")
+
+[node name="Label2" type="Label" parent="." unique_id=1070739682]
+offset_left = 955.0
+offset_top = 448.0
+offset_right = 1122.0
+offset_bottom = 471.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "click the bwaa to play"
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

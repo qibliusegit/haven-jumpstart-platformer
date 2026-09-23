@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://7vw6uvg207r6"]
+
+[ext_resource type="Texture2D" uid="uid://cfh7pjjfq5iyr" path="res://bwaa.png" id="1_uufmw"]
+
+[node name="Node2D" type="Node2D" unique_id=566579128]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=155861241]
+position = Vector2(588.5, 320.99997)
+scale = Vector2(2.4829786, 1.3836206)
+texture = ExtResource("1_uufmw")
+
+[node name="Label" type="Label" parent="." unique_id=2001919822]
+offset_left = 32.0
+offset_right = 393.0
+offset_bottom = 492.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "good job
+
+you win
+
+:3"

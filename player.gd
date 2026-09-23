@@ -28,3 +28,7 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	if position.y > 700:
 		get_tree().quit()
+	if globalvars.score == 20:
+		globalvars.score = 0
+		print("you win!")
+		get_tree().change_scene_to_file("res://bwaa.tscn")

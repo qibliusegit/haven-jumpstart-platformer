@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://d1qsu4c0tinqu" path="res://player.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cfh7pjjfq5iyr" path="res://bwaa.png" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://lrr5modq6a58" path="res://area_2d.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://cygs73rl6o44w" path="res://score.gd" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://csynh7oqbeuat" path="res://starry.jpg" id="5_lquwl"]
+[ext_resource type="AudioStream" uid="uid://8dn64g8rvpfl" path="res://Kessoku Band - That Band(Instrumental).mp3" id="6_7mycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hbih1"]
 size = Vector2(125, 124)
@@ -1716,3 +1720,28 @@ position = Vector2(-3, 0)
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAAAAA4AAAAHAAwAAAABAA4AAAAHAAwAAAACAA4AAAAHAAwAAAADAA4AAAAHAAwAAAAEAA4AAAAHAAwAAAAFAA4AAAAHAAwAAAAIABAAAAAHAAwAAAAJABAAAAAHAAwAAAAKABAAAAAHAAwAAAALABAAAAAHAAwAAAAMABAAAAAHAAwAAAANABAAAAAHAAwAAAAPAA4AAAAHAAwAAAAQAA4AAAAHAAwAAAARAA4AAAAHAAwAAAASAA4AAAAHAAwAAAATAA4AAAAHAAwAAAAUAA4AAAAHAAwAAAAXAAwAAAAHAAwAAAAYAAwAAAAHAAwAAAAZAAwAAAAHAAwAAAAaAAwAAAAHAAwAAAAbAAwAAAAHAAwAAAAcAAwAAAAHAAwAAAAeAA8AAAAHAAsAAAAfAA8AAAAHAAsAAAAgAA8AAAAHAAsAAAAgABAAAAAHAAsAAAAhABAAAAAHAAsAAAAiABAAAAAHAAsAAAAjABAAAAAHAAsAAAA=")
 tile_set = SubResource("TileSet_hbih1")
+
+[node name="Area2D" parent="." unique_id=1349822061 instance=ExtResource("3_h2yge")]
+
+[node name="Label" type="Label" parent="." unique_id=1234137942]
+offset_left = 427.0
+offset_top = 87.0
+offset_right = 729.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 70
+text = "Score: 0"
+script = ExtResource("4_1bvp3")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=670314411]
+z_index = -19
+offset_left = -750.0
+offset_top = -348.0
+offset_right = 2205.0
+offset_bottom = 1240.0
+texture = ExtResource("5_lquwl")
+expand_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=87831380]
+stream = ExtResource("6_7mycd")
+volume_db = -10.757
+autoplay = true
